@@ -1,0 +1,30 @@
+<div *ngIf="modalState" class="popup">
+  <div class="modal-window">
+    <span class="close" (click)="onClose()">X</span>
+    <div class="modal-content">
+      <h1>Edit</h1>
+      <form [formGroup]="recipeForm">
+        <ul class="info">
+          <li><span i18n="@@Name">Name</span> <br/>
+            <input formControlName="name" [value]="recipe.name" placeholder="Recipe Name">
+          </li>
+          <li><span i18n="@@Ingredients">Ingredients</span> <br/>
+            <textarea formControlName="ingredients" [value]="recipe.ingredients" class="ingredients"
+                      placeholder="Ingredients that you need"></textarea>
+          </li>
+          <li><span i18n="@@Time">Time for cooking</span> <br/>
+            <input formControlName="timeForCooking" [value]="recipe.timeForCooking" placeholder="In minutes">
+          </li>
+          <li><span i18n="Description">How to cook</span> <br/>
+            <textarea formControlName="description" [value]="recipe.description" rows="6"
+                      placeholder="describe details"></textarea>
+          </li>
+        </ul>
+      </form>
+      <div class="buttons">
+        <button i18n="@@Edit" (click)="editRecipe(recipe)" class="add_recipe">Edit</button>
+        <button i18n="@@Close" class="close_button" (click)="onClose()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

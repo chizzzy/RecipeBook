@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <app-add-recipe-modal></app-add-recipe-modal>
+  <app-edit-recipe-modal></app-edit-recipe-modal>
+  <div class="recipe_block">
+    <h1 i18n="@@yourRecipes" class="recipe_label">Your recipes</h1>
+    <div class="recipes">
+      <div (click)="openRecipeInfo(recipe)"
+           class="recipe" *ngFor="let recipe of recipes">{{recipe.name}}</div>
+      <button i18n (click)="openAddRecipeModal()"
+              class="add_recipe">Add recipe
+      </button>
+    </div>
+  </div>
+</div>

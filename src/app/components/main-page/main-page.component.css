@@ -1,0 +1,53 @@
+.recipe_label {
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.recipe_block {
+  align-self: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.recipes {
+  text-align: center;
+  height: 500px;
+  width: 50vw;
+  margin: 40px auto 0;
+}
+
+.recipe {
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.recipe:hover {
+  background-color: #AA3939;
+  color: #fff;
+}
+
+ul li {
+  display: inline;
+}
+
+.add_recipe {
+  margin-top: 30px;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  background-color: #AA3939;
+  color: #fff;
+}
+
+.snackbar {
+  color: #AA3939;
+  background-color: #AA3939;
+}
+
+span {
+  font-size: 20px;
+}

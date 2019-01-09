@@ -1,0 +1,30 @@
+<div class="popup" *ngIf="popupState">
+  <div class="modal-window">
+    <span class="close" (click)="hideRecipeInfo()">X</span>
+    <div class="modal-content">
+      <ul class="info">
+        <li>
+          <span i18n>Name: </span>
+          <span>{{recipe.name}}</span>
+        </li>
+        <li>
+          <span i18n>Ingredients: </span>
+          <span>{{recipe.name}}</span>
+        </li>
+        <li>
+          <span i18n>Time for cooking: </span>
+          <span>{{recipe.name}}</span>
+        </li>
+        <li>
+          <span i18n>How to cook: </span>
+          <span>{{recipe.name}}</span>
+        </li>
+      </ul>
+      <div class="buttons">
+        <button i18n class="close_button" (click)="hideRecipeInfo()">Close</button>
+        <button i18n (click)="openEditRecipeModal(recipe)">Edit</button>
+        <button i18n (click)="deleteRecipe()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
