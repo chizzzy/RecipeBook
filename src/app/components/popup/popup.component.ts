@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PopupService} from '../../services/popup.service';
-import {RecipeService} from '../../services/recipe.service';
+import {PopupService} from '../../services/popup/popup.service';
+import {RecipeService} from '../../services/recipe/recipe.service';
 
 @Component({
   selector: 'app-popup',
@@ -15,7 +15,7 @@ export class PopupComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.popupService.popupState$.subscribe((state) => {
+    this.popupService.popupState$.subscribe(state => {
       this.popupState = state;
     });
     this.popupService.recipeIndex$.subscribe(

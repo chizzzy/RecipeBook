@@ -3,12 +3,12 @@
   <app-add-recipe-modal></app-add-recipe-modal>
   <app-edit-recipe-modal></app-edit-recipe-modal>
   <div class="recipe_block">
-    <h1 i18n="@@yourRecipes" class="recipe_label">Your recipes</h1>
+    <h1 i18n="" class="recipe_label">{{'TITLE' | translate}}</h1>
     <div class="recipes">
       <div (click)="openRecipeInfo(recipe)"
            class="recipe" *ngFor="let recipe of recipes">{{recipe.name}}</div>
       <button i18n (click)="openAddRecipeModal()"
-              class="add_recipe">Add recipe
+              class="add_recipe">{{'ADD_RECIPE' | translate}}
       </button>
     </div>
   </div>

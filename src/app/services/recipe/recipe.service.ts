@@ -41,10 +41,10 @@ export class RecipeService {
     const recipes = this.getItemFromLocalStorage();
     for (let i of recipes) {
       if (i.name === recipe.name && i.timeForCooking === recipe.timeForCooking) {
-        i.name = name;
-        i.ingredients = ingredients;
-        i.timeForCooking = timeForCooking;
-        i.description = description;
+        i.name = name || recipe.name;
+        i.ingredients = ingredients || recipe.ingredients;
+        i.timeForCooking = timeForCooking || recipe.timeForCooking;
+        i.description = description || recipe.description;
       }
     }
     localStorage.setItem('recipes', JSON.stringify(recipes));

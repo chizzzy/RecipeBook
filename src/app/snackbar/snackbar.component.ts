@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSnackBar, MatSnackBarRef, SimpleSnackBar} from '@angular/material';
-import {PopupService} from '../services/popup.service';
+import {PopupService} from '../services/popup/popup.service';
 
 @Component({
   selector: 'app-snackbar',

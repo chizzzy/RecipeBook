@@ -2,28 +2,30 @@
   <div class="modal-window">
     <span class="close" (click)="hideRecipeInfo()">X</span>
     <div class="modal-content">
+      <h1>{{'RECIPE' | translate}}</h1>
       <ul class="info">
         <li>
-          <span i18n>Name: </span>
-          <span>{{recipe.name}}</span>
+          <span>{{'NAME' | translate}}: </span><br>
+          <span class="recipe_info">{{recipe.name}}</span>
         </li>
         <li>
-          <span i18n>Ingredients: </span>
-          <span>{{recipe.name}}</span>
+          <span>{{'INGREDIENTS' | translate}}: </span><br>
+          <span class="recipe_info">{{recipe.ingredients}}</span>
         </li>
         <li>
-          <span i18n>Time for cooking: </span>
-          <span>{{recipe.name}}</span>
+          <span>{{'TIME' | translate}}: </span><br>
+          <span class="recipe_info">{{recipe.timeForCooking}}</span>
         </li>
         <li>
-          <span i18n>How to cook: </span>
-          <span>{{recipe.name}}</span>
+          <span>{{'DESCRIPTION' | translate}}: </span><br>
+          <span class="recipe_info">{{recipe.description}}</span>
         </li>
       </ul>
       <div class="buttons">
-        <button i18n class="close_button" (click)="hideRecipeInfo()">Close</button>
-        <button i18n (click)="openEditRecipeModal(recipe)">Edit</button>
-        <button i18n (click)="deleteRecipe()">Delete</button>
+        <button class="close_button" (click)="openEditRecipeModal(recipe)">{{'EDIT' | translate}}</button>
+        <button class="close_button" (click)="hideRecipeInfo()">{{'CLOSE' | translate}}</button>
+        <button class="edit_recipe" (click)="deleteRecipe()">{{'DELETE' | translate}}</button>
+
       </div>
     </div>
   </div>

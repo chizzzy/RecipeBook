@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PopupService} from '../../services/popup.service';
+import {PopupService} from '../../services/popup/popup.service';
 import {FormControl} from '@angular/forms';
-import {RecipeService} from '../../services/recipe.service';
+import {RecipeService} from '../../services/recipe/recipe.service';
 
 @Component({
   selector: 'app-add-recipe-modal',
@@ -40,6 +40,7 @@ export class AddRecipeModalComponent implements OnInit {
 
   onClose() {
     this.popupService.hideAddRecipeModal();
+    this.clearInputFields(this.name, this.ingredients, this.timeForCooking, this.description);
   }
 }
 

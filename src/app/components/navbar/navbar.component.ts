@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TranslateService} from '../../services/translate/translate.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,12 +7,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public language = 'RU';
+  public language = 'EN';
   public urlToMoonImg = '../../../assets/moon-solid.svg';
   public urlToSunImg = '../../../assets/sun-solid.svg';
   public urlToImg = this.urlToMoonImg;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
   }
 
   ngOnInit() {
@@ -23,6 +24,10 @@ export class NavbarComponent implements OnInit {
     } else {
       this.language = 'RU';
     }
+    this.translate.use(this.language.toLowerCase());
+  }
+  setLang(lang) {
+
   }
 
   changeView() {

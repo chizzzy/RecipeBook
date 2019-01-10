@@ -2,24 +2,26 @@
   <div class="modal-window">
     <span class="close" (click)="onClose()">X</span>
     <div class="modal-content">
-      <h1>Add</h1>
+      <h1>{{'ADD' | translate}}</h1>
       <ul class="info">
-        <li><span  i18n="@@Name">Name</span> <br/>
-          <input [formControl]="name" placeholder="Recipe Name">
+        <li><span>{{'NAME' | translate}}</span><br>
+          <input [formControl]="name" [placeholder]="'HOLDER_NAME' | translate">
         </li>
-        <li><span i18n="@@Ingredients">Ingredients</span> <br/>
-          <textarea [formControl]="ingredients" class="ingredients" placeholder="Ingredients that you need"></textarea>
+        <li><span>{{'INGREDIENTS' | translate}}</span><br>
+          <textarea [formControl]="ingredients" class="ingredients"
+                    [placeholder]="'HOLDER_INGREDIENTS' | translate"></textarea>
         </li>
-        <li><span i18n="@@Time">Time for cooking</span> <br/>
-          <input [formControl]="timeForCooking" placeholder="In minutes">
+        <li><span>{{'TIME' | translate}}</span><br>
+          <input [formControl]="timeForCooking" [placeholder]="'HOLDER_TIME' | translate">
         </li>
-        <li><span i18n="@@Description">How to cook</span> <br/>
-          <textarea [formControl]="description" rows="6" placeholder="describe details"></textarea>
+        <li><span>{{'DESCRIPTION' | translate}}</span><br>
+          <textarea [formControl]="description" rows="6" [placeholder]="'HOLDER_DESCRIPTION' | translate"></textarea>
         </li>
       </ul>
       <div class="buttons">
-        <button i18n (click)="addRecipe(name, ingredients, timeForCooking, description)" class="add_recipe">Add</button>
-        <button class="close_button" (click)="onClose()">Close</button>
+        <button (click)="addRecipe(name, ingredients, timeForCooking, description)"
+                class="add_recipe">{{'ADD' | translate}}</button>
+        <button class="close_button" (click)="onClose()">{{'CLOSE' | translate}}</button>
       </div>
     </div>
   </div>

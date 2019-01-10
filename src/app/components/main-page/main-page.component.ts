@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {PopupService} from '../../services/popup.service';
-import {RecipeService} from '../../services/recipe.service';
+import {PopupService} from '../../services/popup/popup.service';
+import {RecipeService} from '../../services/recipe/recipe.service';
+import {TranslateService} from '../../services/translate/translate.service';
 
 @Component({
   selector: 'app-main-page',
@@ -10,7 +11,7 @@ import {RecipeService} from '../../services/recipe.service';
 export class MainPageComponent implements OnInit {
   public recipes = JSON.parse(localStorage.getItem('recipes'));
 
-  constructor(private popupService: PopupService, private recipeService: RecipeService) {
+  constructor(private popupService: PopupService, private recipeService: RecipeService, private translate: TranslateService) {
   }
 
   ngOnInit() {

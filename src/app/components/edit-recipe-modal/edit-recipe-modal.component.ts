@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PopupService} from '../../services/popup.service';
-import {RecipeService} from '../../services/recipe.service';
+import {PopupService} from '../../services/popup/popup.service';
+import {RecipeService} from '../../services/recipe/recipe.service';
 import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
@@ -41,5 +41,9 @@ export class EditRecipeModalComponent implements OnInit {
     const recipeForm = this.recipeForm.value;
     this.recipeService.editRecipe(recipe, recipeForm.name, recipeForm.ingredients, recipeForm.timeForCooking, recipeForm.description);
     this.popupService.hideEditRecipeModal();
+  }
+  getBack() {
+    this.popupService.hideEditRecipeModal();
+    this.popupService.openRecipeInfo(this.recipe);
   }
 }

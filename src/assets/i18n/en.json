@@ -1,0 +1,18 @@
+{
+  "TITLE": "My recipes",
+  "ADD": "Add",
+  "DELETE": "Delete",
+  "EDIT": "Edit",
+  "CLOSE": "Close",
+  "ADD_RECIPE": "Add recipe",
+  "NAME": "Name",
+  "INGREDIENTS":"Ingredients",
+  "TIME": "Time for cooking",
+  "DESCRIPTION": "How to cook",
+  "HOLDER_NAME": "Recipe name",
+  "HOLDER_INGREDIENTS": "Ingredients that you need",
+  "HOLDER_TIME": "In minutes",
+  "HOLDER_DESCRIPTION": "Describe details",
+  "BACK": "Back",
+  "RECIPE": "Recipe info"
+}
