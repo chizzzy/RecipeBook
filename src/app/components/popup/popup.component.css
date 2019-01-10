@@ -57,8 +57,7 @@ h1 {
 
 .close_button {
   height: 50px;
-  width: 100px;
-  margin-left: 15px;
+  width: 114px;
   background-color: #E0E0E0;
   color: #222222;
 }
@@ -74,7 +73,7 @@ li {
   font-size: 22px;
 }
 
-.edit_recipe {
+.delete_recipe {
   height: 50px;
   width: 150px;
   background-color: #AA3939;

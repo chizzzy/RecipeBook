@@ -19,7 +19,9 @@ import {TranslatePipe} from './pipes/translate.pipe';
 
 export function setupTranslateFactory(
   service: TranslateService): Function {
-  return () => service.use('en');
+  return () => {
+    service.use(JSON.parse(localStorage.getItem('language')));
+  };
 }
 
 @NgModule({

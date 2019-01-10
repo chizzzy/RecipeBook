@@ -7,7 +7,7 @@ import {TranslateService} from '../../services/translate/translate.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public language = 'EN';
+  public language = (JSON.parse(localStorage.getItem('language'))) || 'en';
   public urlToMoonImg = '../../../assets/moon-solid.svg';
   public urlToSunImg = '../../../assets/sun-solid.svg';
   public urlToImg = this.urlToMoonImg;
@@ -19,17 +19,13 @@ export class NavbarComponent implements OnInit {
   }
 
   changeLanguage() {
-    if (this.language === 'RU') {
-      this.language = 'EN';
+    if (this.language === 'ru') {
+      this.language = 'en';
     } else {
-      this.language = 'RU';
+      this.language = 'ru';
     }
     this.translate.use(this.language.toLowerCase());
   }
-  setLang(lang) {
-
-  }
-
   changeView() {
     if (this.urlToImg === this.urlToSunImg) {
       this.urlToImg = this.urlToMoonImg;

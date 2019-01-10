@@ -7,13 +7,13 @@ import {HttpClient } from '@angular/common/http';
 export class TranslateService {
 data: any = {};
   constructor(private http: HttpClient) { }
-  use(lang: string): Promise<{}> {
+  use(lang): Promise<{}> {
     return new Promise<{}>((resolve, reject) => {
       const langPath = `assets/i18n/${lang || 'en'}.json`;
       this.http.get<{}>(langPath).subscribe(
         translation => {
-          console.log(translation);
           this.data = Object.assign({}, translation || {});
+          localStorage.setItem('language', JSON.stringify(lang));
           resolve(this.data);
         },
         error => {
