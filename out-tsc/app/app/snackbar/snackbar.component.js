@@ -11,7 +11,6 @@ var SnackbarComponent = /** @class */ (function () {
         var _this = this;
         this.popupService.snackBarStatus$.subscribe(function (status) {
             _this.snackBarStatus = status;
-            console.log(status);
         });
     };
     SnackbarComponent = tslib_1.__decorate([

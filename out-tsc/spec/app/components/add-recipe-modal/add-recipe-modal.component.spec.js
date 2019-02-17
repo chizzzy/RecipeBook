@@ -18,4 +18,4 @@ describe('AddRecipeModalComponent', function () {
         expect(component).toBeTruthy();
     });
 });
-//# sourceMappingURL=add-recipe-modal.component.spec.js.map
+//# sourceMappingURL=recipe.component.spec.js.map

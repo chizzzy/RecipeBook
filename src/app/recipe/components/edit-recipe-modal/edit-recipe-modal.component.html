@@ -1,0 +1,32 @@
+<div *ngIf="modalState" class="popup">
+  <div class="modal-window">
+    <span class="close" (click)="onClose()">X</span>
+    <div class="modal-content">
+      <h1>{{'EDIT' | translate}}</h1>
+      <form [formGroup]="recipeForm">
+        <ul class="info">
+          <li><span>{{'NAME' | translate}}</span> <br/>
+            <input formControlName="name" [value]="recipe.name" [placeholder]="'HOLDER_NAME' | translate">
+          </li>
+          <li><span>{{'INGREDIENTS' | translate}}</span> <br/>
+            <textarea formControlName="ingredients" [value]="recipe.ingredients" class="ingredients"
+                      [placeholder]="'HOLDER_INGREDIENTS' | translate"></textarea>
+          </li>
+          <li><span>{{'TIME' | translate}}</span> <br/>
+            <input formControlName="timeForCooking" [value]="recipe.timeForCooking"
+                   [placeholder]="'HOLDER_TIME' | translate">
+          </li>
+          <li><span>{{'DESCRIPTION' | translate}}</span> <br/>
+            <textarea formControlName="description" [value]="recipe.description" rows="6"
+                      [placeholder]="'HOLDER_NAME' | translate"></textarea>
+          </li>
+        </ul>
+      </form>
+      <div class="buttons">
+        <button (click)="getBack()" class="close_button">{{'BACK' | translate}}</button>
+        <button (click)="editRecipe(recipe)" class="add_recipe">{{'EDIT' | translate}}</button>
+        <button class="close_button" (click)="onClose()">{{'CLOSE' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>

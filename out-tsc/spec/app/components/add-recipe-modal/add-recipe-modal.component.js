@@ -37,13 +37,13 @@ var AddRecipeModalComponent = /** @class */ (function () {
     };
     AddRecipeModalComponent = tslib_1.__decorate([
         Component({
-            selector: 'app-add-recipe-modal',
-            templateUrl: './add-recipe-modal.component.html',
-            styleUrls: ['./add-recipe-modal.component.css']
+            selector: 'app-recipe',
+            templateUrl: './recipe.component.html',
+            styleUrls: ['./recipe.component.css']
         }),
         tslib_1.__metadata("design:paramtypes", [PopupService, RecipeService])
     ], AddRecipeModalComponent);
     return AddRecipeModalComponent;
 }());
 export { AddRecipeModalComponent };
-//# sourceMappingURL=add-recipe-modal.component.js.map
+//# sourceMappingURL=recipe.component.js.map
